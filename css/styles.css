@@ -53,7 +53,7 @@ p {
     width: 1000px;
     max-width: 1000px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill,minmax(1fr, 360px));
 }
 
 #features > div{
@@ -67,7 +67,6 @@ p {
 }
 .features-item-large h2, 
 .features-item-large p {
-    max-width: 60%;
     max-width: 380px;
 }
 .features-item-large button {
@@ -116,8 +115,6 @@ i {
     margin-right: 0.6rem;
 }
 
-
-
 .back-cover {
     width: 900px;
     max-width: 80%;
@@ -129,9 +126,6 @@ i {
 }
 
 @media(max-width:750px) {
-    #features {
-        grid-template-columns: repeat(2,1fr);
-    }
     #features div:nth-child(3),
     #features div:nth-child(4)  {
         border-radius: 0;
@@ -146,12 +140,9 @@ i {
     .back-cover {
         display: none;
     }
-
 }
+
 @media(max-width:500px) {
-    #features {
-        grid-template-columns: 1fr;
-    }
     .features-item-large {
         grid-column: 1 / span 1;
     }
